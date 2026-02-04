@@ -5,6 +5,9 @@ AI Job Assistant is an AI tool made to help users, **especially 4th year student
 
 ## Features
 
+## Link to Streamlit App
+Go [here](https://ebrb2022-ai-job-assistant-app-r3mair.streamlit.app/) 
+
 - **Task Planning:**  
   Break down the job search process into actionable tasks using the planner module.
 
