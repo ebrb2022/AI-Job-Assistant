@@ -1,12 +1,23 @@
 import os, re, requests
 from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
-
+import streamlit as st
 load_dotenv()
 
 client = InferenceClient(token=os.getenv("HF_TOKEN")) # the Hugging Face Inference API client
-RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY") 
-SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+
+def get_secret(name):
+    try:
+        # get secret from Streamlit secrets
+        return st.secrets[name]
+    except Exception:
+        # Fallback to local .env
+        return os.getenv(name)
+
+SERPAPI_KEY = get_secret("SERPAPI_KEY")
+RAPIDAPI_KEY = get_secret("RAPIDAPI_KEY")
+HF_TOKEN = get_secret("HF_TOKEN")
+
 
 def generate_content(prompt, task_type="general", max_tokens=None):
     """Generate content with task-specific parameters using Hugging Face Inference API"""
