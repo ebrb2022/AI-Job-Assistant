@@ -4,7 +4,7 @@
 AI Job Assistant is an AI tool made to help users, **especially 4th year students**, find jobs, generate sample resumes, and create sample cover letters. It integrates modern generative AI with real-time job search data to make the job application process interesting and possibly more efficient.
 
 ## Link to Streamlit App
-Go [here](https://ebrb2022-ai-job-assistant-app-r3mair.streamlit.app/) to access the the AI Job Assistant Streamlit app.
+Go [here](https://ebrb2022-ai-job-assistant-app-r3mair.streamlit.app/) to access the AI Job Assistant Streamlit app.
 
 ## Features
 - **Task Planning:**  
