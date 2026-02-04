@@ -1,0 +1,8 @@
+python-dotenv
+requests
+streamlit
+huggingface-hub
+sentence-transformers
+chromadb
+numpy
+
