@@ -45,7 +45,6 @@ def generate_content(prompt, task_type="general", max_tokens=None):
         }
     }
     
-
     config = configs.get(task_type, configs['general'])
     if max_tokens:
         config['max_tokens'] = max_tokens
@@ -59,7 +58,7 @@ def generate_content(prompt, task_type="general", max_tokens=None):
     try:
         # Call Hugging Face Inference API, using this llama model because it's good at following instructions
         response = client.chat_completion(
-            model="meta-llama/Llama-3.2-3B-Instruct",
+            model="meta-llama/Llama-3.1-8B-Instruct",
             messages=messages,
             max_tokens=config['max_tokens'],
             temperature=config['temperature'],
